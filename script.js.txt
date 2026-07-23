@@ -1,0 +1,54 @@
+// Pega aquí la URL que te dará Google Apps Script
+const SCRIPT_URL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+const form = document.getElementById("registrationForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const player = document.getElementById("player").value.trim();
+    const alliance = document.getElementById("alliance").value.trim();
+
+    if (!player || !alliance) {
+        message.style.color = "#ff4d4d";
+        message.innerHTML = "Please complete all fields.<br>모든 항목을 입력하세요.";
+        return;
+    }
+
+    try {
+
+        const response = await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify({
+                player,
+                alliance
+            })
+        });
+
+        if (response.ok) {
+
+            message.style.color = "#7CFC00";
+
+            message.innerHTML =
+            "Registration Successful!<br>등록이 완료되었습니다!";
+
+            form.reset();
+
+        } else {
+
+            throw new Error();
+
+        }
+
+    } catch {
+
+        message.style.color = "#ff4d4d";
+
+        message.innerHTML =
+        "Connection error.<br>연결 오류가 발생했습니다.";
+
+    }
+
+});
