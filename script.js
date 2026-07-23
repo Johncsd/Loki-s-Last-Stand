@@ -18,30 +18,30 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch(SCRIPT_URL, {
+        await fetch(SCRIPT_URL, {
             method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
             body: JSON.stringify({
-                player,
-                alliance
+                player: player,
+                alliance: alliance
             })
         });
 
-        if (response.ok) {
 
-            message.style.color = "#7CFC00";
+        message.style.color = "#7CFC00";
 
-            message.innerHTML =
-            "Registration Successful!<br>등록이 완료되었습니다!";
+        message.innerHTML =
+        "Registration Successful!<br>등록이 완료되었습니다!";
 
-            form.reset();
+        form.reset();
 
-        } else {
 
-            throw new Error();
+    } catch (error) {
 
-        }
-
-    } catch {
+        console.log(error);
 
         message.style.color = "#ff4d4d";
 
