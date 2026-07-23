@@ -1,10 +1,30 @@
-<h1>Loki´s Last Stand</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loki's Last Stand</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Loki's Last Stand</h1>
+
 <h2>로키 토너먼트</h2>
 
 <p class="subtitle">
 Official Registration<br>
 공식 참가 등록
 </p>
+
 
 <form id="registrationForm">
 
@@ -14,11 +34,13 @@ id="player"
 placeholder="Player Name / 플레이어 이름"
 required>
 
+
 <input
 type="text"
 id="alliance"
 placeholder="Alliance / 연맹"
 required>
+
 
 <button type="submit">
 REGISTER / 등록
@@ -26,36 +48,62 @@ REGISTER / 등록
 
 </form>
 
+
 <div id="message"></div>
 
+
 <hr>
+
 
 <h2>
 Registered Players<br>
 등록된 참가자
 </h2>
 
+
 <div id="counter">
 0 Players Registered<br>
 등록된 참가자 0명
 </div>
 
+
 <table>
 
 <thead>
+
 <tr>
 
 <th>№</th>
 
-<th>Player<br>플레이어</th>
+<th>
+Player<br>
+플레이어
+</th>
 
-<th>Alliance<br>연맹</th>
+<th>
+Alliance<br>
+연맹
+</th>
 
 </tr>
+
 </thead>
+
 
 <tbody id="list">
 
 </tbody>
 
+
 </table>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
