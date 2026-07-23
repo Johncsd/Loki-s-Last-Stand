@@ -1,5 +1,5 @@
 // Pega aquí la URL que te dará Google Apps Script
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxq8MebQoKxuusqyvP80eXR_q5FRxYEFOdvc22JZ6Jn-HYRMNlD7LSwbk_xfws1ObR6/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxb-PgH8j0GjcdKWYmXXbjysHrsL_SdS-oiZQctN3iq_BzDukiGS52Qq7LaUOct_MkV/exec";
 
 const form = document.getElementById("registrationForm");
 const message = document.getElementById("message");
